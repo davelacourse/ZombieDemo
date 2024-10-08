@@ -372,17 +372,17 @@ PrefabInstance:
     - target: {fileID: 3974795352110575711, guid: bd5763ea029067749b997adc8760f372,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.02
+      value: 7.182
       objectReference: {fileID: 0}
     - target: {fileID: 3974795352110575711, guid: bd5763ea029067749b997adc8760f372,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.526
+      value: 0.609
       objectReference: {fileID: 0}
     - target: {fileID: 3974795352110575711, guid: bd5763ea029067749b997adc8760f372,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.99
+      value: 9.992
       objectReference: {fileID: 0}
     - target: {fileID: 3974795352110575711, guid: bd5763ea029067749b997adc8760f372,
         type: 3}
@@ -2497,7 +2497,6 @@ GameObject:
   m_Component:
   - component: {fileID: 700300405}
   - component: {fileID: 700300406}
-  - component: {fileID: 700300407}
   m_Layer: 0
   m_Name: Zombie Spawner
   m_TagString: Untagged
@@ -2550,25 +2549,6 @@ MonoBehaviour:
   - {fileID: 1091598629}
   - {fileID: 1949067264}
   - {fileID: 632322137}
---- !u!114 &700300407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700300404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4270268876
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
 --- !u!1001 &719459075
 PrefabInstance:
   m_ObjectHideFlags: 0

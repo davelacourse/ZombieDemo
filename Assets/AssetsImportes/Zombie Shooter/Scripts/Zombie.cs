@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Zombie : MonoBehaviour
 {
@@ -29,7 +30,11 @@ public class Zombie : MonoBehaviour
         agent.SetDestination(target.position);
 
         if (Vector3.Distance(target.position, transform.position) < 1.5f)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        {
+            var index = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(index + 1);
+        }
+            
     }
 
     public void Death()
@@ -40,7 +45,7 @@ public class Zombie : MonoBehaviour
         AudioSource audioS= GetComponent<AudioSource>();
         audioS.loop = false;
         audioS.PlayOneShot(deathAudio);
-
+        GameManagerZombie.Instance.AugmenterZombies();
         Destroy(gameObject, 10);
         Destroy(this);
     }

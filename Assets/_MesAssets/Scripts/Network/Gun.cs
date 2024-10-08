@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
-public class Gun : NetworkBehaviour
+public class Gun : MonoBehaviour
 {
     public float speed = 40;
     public GameObject bullet;

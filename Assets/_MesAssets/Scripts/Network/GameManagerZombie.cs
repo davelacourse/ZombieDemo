@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerZombie : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameManagerZombie : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -30,18 +31,28 @@ public class GameManagerZombie : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+
+    }
+
     private void Update()
     {
         _timer += Time.deltaTime;
-        
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     public void AugmenterZombies()
     {
         _zombieTues++;
+        UIManager.Instance.UpdateTextZombie();
         if (_zombieTues % 10 == 0) 
         {
-            //Spawner.Instance.ReduireSpawnTime();
+            Spawner.Instance.ReduireSpawnTime();
             _vitesseZombie += 0.1f;
         }
     }
